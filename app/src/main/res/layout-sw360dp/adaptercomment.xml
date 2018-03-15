@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center">
+
+            <com.pkmmte.view.CircularImageView
+                android:id="@+id/civPhoto"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/blankprofile"
+                app:shadow="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/therapist_red"
+                android:id="@+id/ivVerified"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/vf_verified"
+                android:id="@+id/ivAccepted"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llAnswered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/misc_accepted"
+                android:id="@+id/ivShare"/>
+            <TextView
+                android:id="@+id/tvAccepted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorGrey"
+                android:text="Answered"
+                android:textSize="9dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Rory J. Cassidy"
+            android:textColor="@color/colorBlack"
+            android:textSize="10dp"
+            android:id="@+id/tvCommentName"/>
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/layout_bg">
+            <TextView
+                android:id="@+id/tvCommentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thanks Cr. Anthony, I have difficulty walking, I can't really extend my legs out as far as usual or straighten the legs so I am not walking as normal and walking a lot slower however I don't have pain down my legs or difficulty with bladder/bowel movements thankfully."
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:textColor="@color/colorPrimary"
+                android:textSize="11dp"
+                android:padding="5dp"/>
+
+            <ImageView
+                android:id="@+id/post_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/image_1"
+                android:scaleType="centerCrop"
+                android:visibility="visible"/>
+            <RelativeLayout
+                android:id="@+id/video_frame"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlack"
+                android:padding="10dp"
+                android:visibility="visible"
+                >
+                <com.jarvanmo.exoplayerview.ui.ExoVideoView
+                    android:id="@+id/post_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    app:use_artwork="true"
+                    />
+
+                <com.pkmmte.view.CircularImageView
+                    android:id="@+id/play_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/player_play"
+                    android:visibility="visible"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 hours ago"
+            android:textSize="10dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvCommentTime"/>
+    </LinearLayout>
+</LinearLayout>

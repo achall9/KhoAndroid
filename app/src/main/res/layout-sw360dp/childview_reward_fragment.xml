@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <com.kholabs.khoand.CustomView.ImageView.RoundedImageView
+            android:id="@+id/rIvbackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pattern_green"
+            android:scaleType="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="right">
+                <TextView
+                    android:id="@+id/tvRewardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Supporter"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="right">
+                    <ImageView
+                        android:id="@+id/ivRewardSymbol"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/misc_like"/>
+
+                    <TextView
+                        android:id="@+id/tvUpdatedWeekly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="8dp"
+                        android:text="Updated Weekly"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:text="@string/child_supporter_string"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="9sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_above="@+id/progress_step">
+                    <LinearLayout
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/ivBronze"
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/medal_3"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:id="@+id/ivSilver"
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/medal_2"/>
+
+                        <ImageView
+                            android:id="@+id/ivGold"
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/medal_1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="right">
+                        <TextView
+                            android:id="@+id/tvResponseVal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:text="8/10 Responses\nLevel: Bronze"
+                            android:textSize="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_step"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:max="100"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

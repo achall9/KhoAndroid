@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/bg_main"
+    tools:context="com.kholabs.khoand.Activity.TutorialActivity">
+
+    <com.kholabs.khoand.CustomView.ViewPager.NonSwipeableViewPager
+        android:id="@+id/introPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6" />
+    <FrameLayout
+        android:id="@+id/pagesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@android:color/transparent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"/>
+    <Button
+        android:id="@+id/btStep"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_apply_round"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"/>
+</LinearLayout>

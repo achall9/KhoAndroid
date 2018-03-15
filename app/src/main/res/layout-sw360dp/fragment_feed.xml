@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/fragment_mainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/colorGreen"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/query_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGreen"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/query_fixed"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:background="@color/colorGreen"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:animateLayoutChanges="true">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="left|center"
+                        android:text="What is your injury question?"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorWhite"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/query_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorGreen"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1"
+                    android:visibility="gone"
+                    android:animateLayoutChanges="true">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/questPager"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="0.85" />
+
+                    <Button
+                        android:id="@+id/btnQuestNext"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.15"
+                        android:background="@drawable/button_round"
+                        android:text="Next"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="9dp"></Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/collapse_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:id="@+id/pagesContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/colorGreen"></FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/upload_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/colorDeepPrimary"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:id="@+id/img_photoupload"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.08"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/misc_photo_coloured" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="0.15"
+                            android:gravity="center"
+                            android:text="Image"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="9dp" />
+
+                        <ImageView
+                            android:id="@+id/img_videoupload"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.08"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/misc_video_coloured" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="0.15"
+                            android:gravity="center"
+                            android:text="Video"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="9dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toLeftOf="@+id/ivFilter"
+                    android:background="@drawable/default_textfield"
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:hint="Search"
+                    android:singleLine="true"
+                    android:textColor="@color/colorText"
+                    android:textColorHint="@color/colorText"
+                    android:textSize="13dp"></EditText>
+                <ImageView
+                    android:id="@+id/ivFilter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_toLeftOf="@+id/ivBell"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/misc_filter_unselected" />
+                <ImageView
+                    android:id="@+id/ivBell"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/misc_bell_white" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srl_direction="both">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/list_feed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorDeepGrey"
+                    android:footerDividersEnabled="false"
+                    android:divider="@null">
+
+                </ListView>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+        -->
+        <RelativeLayout
+            android:id="@+id/main_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.kholabs.khoand.CustomView.PullRefreshView.PullToRefreshRecyclerView
+                android:id="@+id/list_feed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:dividerHeight="0dp"
+                android:divider="@null"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:listSelector="@android:color/transparent"
+                android:animationCache="false"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/adapterfeed"/>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_filter"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:el_duration="1000"
+                app:el_expanded="true"
+                app:el_parallax="0.5">
+                <LinearLayout
+                    android:id="@+id/filter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/colorDeepPrimary"
+                    android:weightSum="7.5">
+                    <TextView
+                        android:id="@+id/txt_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Location"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                        android:id="@+id/sg_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:elevation="2dp"
+                        app:sbg_animateSelectorDuration="1000"
+                        app:sbg_backgroundColor="@color/colorBlack"
+                        app:sbg_borderColor="@color/colorBlack"
+                        app:sbg_selectorColor="#0C7364"
+                        app:sbg_draggable="true"
+                        app:sbg_rippleColor="@color/colorGrey"
+                        app:sbg_position="0"
+                        app:sbg_radius="30dp"
+                        >
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_anywhere"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_nearme"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_custom"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                    </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+                    <TextView
+                        android:id="@+id/txt_answers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Answers"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                        android:id="@+id/sg_answers"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:elevation="2dp"
+                        app:sbg_animateSelectorDuration="1000"
+                        app:sbg_backgroundColor="@color/colorBlack"
+                        app:sbg_borderColor="@color/colorBlack"
+                        app:sbg_selectorColor="#0C7364"
+                        app:sbg_draggable="true"
+                        app:sbg_rippleColor="@color/colorGrey"
+                        app:sbg_position="0"
+                        app:sbg_radius="30dp"
+                        >
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_unfiltered"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_noanswer"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_topanswer"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                    </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+
+                    <TextView
+                        android:id="@+id/txt_orders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Order"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                        android:id="@+id/sg_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:elevation="2dp"
+                        app:sbg_animateSelectorDuration="1000"
+                        app:sbg_backgroundColor="@color/colorBlack"
+                        app:sbg_borderColor="@color/colorBlack"
+                        app:sbg_selectorColor="#0C7364"
+                        app:sbg_draggable="true"
+                        app:sbg_rippleColor="@color/colorGrey"
+                        app:sbg_position="0"
+                        app:sbg_radius="30dp"
+                        >
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_newest"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                        <co.ceryle.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            app:sb_text="@string/segment_control_oldest"
+                            app:sb_textColor="@color/colorText"
+                            app:sb_textSize="13dp"
+                            app:sb_textColor_onSelection="@color/colorWhite"
+                            app:sb_textTypeface="serif"/>
+
+                    </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5">
+                        <Button
+                            android:id="@+id/ibApply"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:text="Apply"
+                            android:textAllCaps="false"
+                            style="@style/applyButton" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <RelativeLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@android:color/transparent">
+                <com.wonderkiln.blurkit.BlurLayout
+                    android:id="@+id/blurProgLayout"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    blk_blurRadius="12"
+                    blk_downscaleFactor="0.12"
+                    blk_fps="60">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/txt_progtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="Uploading Post"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="17dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/txt_progwaiting"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="please wait..."
+                            android:textColor="#838383"
+                            android:textSize="14dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@android:color/transparent"/>
+                        <ProgressBar
+                            android:id="@+id/progress_uploading"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:max="100"/>
+                        <Button
+                            android:id="@+id/btn_progcancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Cancel"
+                            android:textColor="@color/colorGrey"
+                            android:textAllCaps="false"
+                            android:textSize="17dp"
+                            android:background="@android:color/transparent" />
+                    </LinearLayout>
+                </com.wonderkiln.blurkit.BlurLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

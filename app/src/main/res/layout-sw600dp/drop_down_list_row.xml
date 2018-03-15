@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#303030">
+        <TextView
+            android:id="@+id/tvItemType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:text="Tennis"
+            android:textSize="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivCheckBox"
+            android:layout_marginLeft="45dp"
+            android:background="@android:color/transparent"/>
+        <ImageView
+            android:id="@+id/ivCheckBox"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/misc_tick_filled"
+            android:scaleType="fitCenter"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

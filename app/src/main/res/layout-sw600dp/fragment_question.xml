@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/fragment_mainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="bottom"
+            android:background="@drawable/pattern_green">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/llBack"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:src="@drawable/left"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Back"
+                        android:textSize="25dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Questions"
+                    android:textSize="30dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/main_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.kholabs.khoand.CustomView.PullRefreshView.PullToRefreshRecyclerView
+                    android:id="@+id/list_feed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:dividerHeight="0dp"
+                    android:divider="@null"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:listSelector="@android:color/transparent"
+                    android:animationCache="false"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/adapterfeed"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

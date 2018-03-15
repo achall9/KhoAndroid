@@ -1,0 +1,287 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDeepGrey"
+    android:id="@+id/fragment_mainLayout"
+    tools:context="com.kholabs.khoand.Fragment.FeedPostFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="bottom"
+            android:background="@drawable/pattern_green">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/llBack"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/left"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Back"
+                        android:textSize="25dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post"
+                    android:textSize="30dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/iv_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/misc_bin_white" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/listComments"
+                android:layout_above="@+id/rlPost"
+                android:divider="@null">
+            </ListView>
+
+            <RelativeLayout
+                android:id="@+id/dialog_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rlPost"
+                android:visibility="gone"
+                android:background="@android:color/transparent">
+                <com.wonderkiln.blurkit.BlurLayout
+                    android:id="@+id/blurLayout"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="450dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    blk_blurRadius="12"
+                    blk_downscaleFactor="0.12"
+                    blk_fps="60">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/txt_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:text="@string/dialog_title_select_action"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="25dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                        <ImageView
+                            android:layout_width="360dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGrey"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/txt_subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:text="Select the type of media"
+                            android:textColor="@color/colorText"
+                            android:textSize="25dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@android:color/transparent"/>
+                        <ImageView
+                            android:layout_width="360dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGrey"
+                            android:layout_gravity="center"/>
+                        <Button
+                            android:id="@+id/btn_select_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:text="Select Image"
+                            android:textColor="@color/colorGrey"
+                            android:textAllCaps="false"
+                            android:textSize="25dp"
+                            android:background="@android:color/transparent" />
+                        <ImageView
+                            android:layout_width="360dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGrey"
+                            android:layout_gravity="center"/>
+                        <Button
+                            android:id="@+id/btn_select_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:text="Select Video"
+                            android:textColor="@color/colorGrey"
+                            android:textAllCaps="false"
+                            android:textSize="25dp"
+                            android:background="@android:color/transparent" />
+                        <ImageView
+                            android:layout_width="360dp"
+                            android:layout_height="2dp"
+                            android:background="@color/colorGrey"
+                            android:layout_gravity="center"/>
+                        <Button
+                            android:id="@+id/btn_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_marginBottom="50dp"
+                            android:text="Cancel"
+                            android:textColor="@color/colorGrey"
+                            android:textAllCaps="false"
+                            android:textSize="25dp"
+                            android:background="@android:color/transparent" />
+                    </LinearLayout>.
+                </com.wonderkiln.blurkit.BlurLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rlPost"
+                android:visibility="visible"
+                android:background="@android:color/transparent">
+                <com.wonderkiln.blurkit.BlurLayout
+                    android:id="@+id/blurProgLayout"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="450dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    blk_blurRadius="12"
+                    blk_downscaleFactor="0.12"
+                    blk_fps="60">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/txt_progtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:text="Uploading Post"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="25dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/txt_progwaiting"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="please wait..."
+                            android:textColor="#838383"
+                            android:textSize="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@android:color/transparent"/>
+                        <ProgressBar
+                            android:id="@+id/progress_uploading"
+                            android:layout_marginTop="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:max="100"/>
+                        <Button
+                            android:id="@+id/btn_progcancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="30dp"
+                            android:text="Cancel"
+                            android:textColor="@color/colorGrey"
+                            android:textAllCaps="false"
+                            android:textSize="25dp"
+                            android:background="@android:color/transparent" />
+                    </LinearLayout>
+                </com.wonderkiln.blurkit.BlurLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="25dp"
+                android:paddingRight="20dp"
+                android:paddingTop="17dp"
+                android:paddingBottom="17dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/misc_attach"
+                    android:layout_toLeftOf="@+id/tvPost"
+                    android:id="@+id/ivAttach"
+                    android:padding="6dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tvPost"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+                <EditText
+                    android:id="@+id/etComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/ivAttach"
+                    android:background="@drawable/default_textfield"
+                    android:hint="Type comment here"
+                    android:lines="1"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="22dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>

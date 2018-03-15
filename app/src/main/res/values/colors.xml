@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2b3b46</color>
+    <color name="colorPrimaryDark">#00FFFFFF</color>
+    <color name="colorAccent">#2b3b46</color>
+    <color name="colorDeepPrimary">#142831</color>
+
+    <color name="colorText">#c7c7c7</color>
+    <color name="colorline">#6c7071</color>
+    <color name="colorGrey">#4a5560</color>
+    <color name="colorGrey1">#4a5560</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGreen">#56d795</color>
+    <color name="colorBlack">#171817</color>
+    <color name="colorDeepGrey">#e1e1e7</color>
+    <color name="colorDeepWhite">#ebebec</color>
+    <color name="colorTransparent">#88646063</color>
+    <color name="colorOverlay">#78ffffff</color>
+    <color name="colorBg">#f5f5f5</color>
+    <color name="colorCyan">#3fa5f0</color>
+
+    <color name="athlete_left">#3fa5f0</color>
+    <color name="athlete_right">#7130f4</color>
+    <color name="therapist_left">#56d795</color>
+    <color name="therapist_right">#abe155</color>
+    <color name="button_left">#3fbfac</color>
+    <color name="button_right">#4d9dad</color>
+</resources>

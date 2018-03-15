@@ -1,0 +1,45 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_mainLayout"
+    android:background="@android:color/transparent"
+    tools:context="com.kholabs.khoand.Fragment.ChildProfileFragment.ChildInfoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/childview_info_fragment"
+                android:visibility="visible"
+                android:id="@+id/layout_athlete"/>
+            <include
+                layout="@layout/therapist_info_fragment"
+                android:visibility="visible"
+                android:id="@+id/layout_therapist"/>
+            <LinearLayout
+                android:id="@+id/map_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/map_therapist"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/adapter_feed"
+        android:orientation="horizontal">
+
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/civPhoto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/blankprofile"
+            android:layout_marginRight="15dp"
+            app:shadow="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlNames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/civPhoto"
+            android:layout_toLeftOf="@+id/tvMsgTime"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rory J. Cassidy"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="17dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:paddingRight="5dp"
+                    android:id="@+id/tvUserName"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yesterday"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorline"
+                    android:textSize="14dp"
+                    android:id="@+id/tvLatestMsg"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="@color/colorTransparent"
+            android:text="2w"
+            android:textSize="10sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/tvMsgTime"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

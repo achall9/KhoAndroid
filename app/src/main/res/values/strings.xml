@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Kho</string>
+    <string name="parse_server_url">https://pg-app-1dj492vrr8pgs8xiceeukfdpyf7wy7.scalabl.cloud/1/</string>
+    <string name="parse_app_id">feprF30HMaUnBFSqHooMmD5hR8ARSPfpsVTSJUJF</string>
+    <string name="parse_client_key">WOqjzTnX9uSwVy3elc3A9Ss6Pf7SRJTGsFKpSpVs</string>
+    <string name="google_maps_key">AIzaSyCVKlkA7eGWgVznISLcNS13Og7rPjNo9Sk</string>
+    <string name="google_maps_release_key">AIzaSyCJK2fu97kG-KNaBcE56FHxt3zn21rRO8I</string>
+    <string name="taplytics_sdk_key">053c572e8ff5674edd716023c7046e8a8e59346b</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="alert_title_reset_password">Reset Password</string>
+    <string name="alert_title_change_password">Change Password</string>
+    <string name="alert_title_add_custom">Add Custom Field</string>
+    <string name="alert_message_password_changed">Password Changed. Please login again to coninute.</string>
+    <string name="alert_title_email_sent">Email Sent</string>
+    <string name="alert_content_email_sent">Please check your emails for password\n reset instructions. Be sure to \nalso check the Junk folder.</string>
+    <string name="alert_profile_unverified">Your profile has not been verified yet. \nYou cannot post comments until then.</string>
+    <string name="alert_title_error">Error</string>
+    <string name="alert_fill_first_query">Please fill in the injury question</string>
+    <string name="alert_fill_miss_information">Please fill in the missing information</string>
+    <string name="alert_provide_document_therapist">You have been signed up! To confirm your profile,\n please upload the relevant documents \nthat proves you are a qualified therapist.</string>
+
+    <string name="facebook_app_id">496793080713719</string>
+    <string name="label_status_first">Connecting Athletes \n and Therapists</string>
+    <string name="label_no_comment">No Comments</string>
+    <string name="label_no_result">No Results</string>
+    <string name="label_no_message">No Messages</string>
+
+    <string name="dialog_title_select_action">Select Action</string>
+    <string name="action_sheet_add_image">Add Image</string>
+    <string name="action_sheet_remove_image">Remove Image</string>
+    <string name="action_sheet_replace_image">Replace Image</string>
+    <string name="action_sheet_remove_file">Remove File</string>
+    <string name="action_sheet_add_video">Add Video</string>
+    <string name="action_sheet_remove_video">Remove Video</string>
+    <string name="action_sheet_replace_video">Replace Video</string>
+    <string name="action_sheet_choose_from_library">Choose from Library</string>
+    <string name="action_sheet_take_photo">Take Photo</string>
+    <string name="action_sheet_remove">Remove</string>
+
+    <string name="action_sheet_remove_comment">Remove Comment</string>
+    <string name="action_sheet_edit_comment">Edit Comment</string>
+    <string name="action_sheet_report">Report</string>
+    <string name="action_sheet_remove_answer">Remove Accepted Answer</string>
+    <string name="action_sheet_accept_answer">Accept As Answer</string>
+
+    <string name="appbar_overscroll_behavior">com.kholabs.khoand.Utils.ProfileHeader.behavior.AppBarLayoutOverScrollViewBehavior</string>
+    <string name="appbar_circleimageview_behavior">com.kholabs.khoand.Utils.ProfileHeader.behavior.CircleImageInUsercBehavior</string>
+    <string name="fixed_scrollingview_behavior">com.kholabs.khoand.Utils.ProfileHeader.behavior.FixedScrollingViewBehavior</string>
+
+    <string name="segment_control_info">Info</string>
+    <string name="segment_control_post">Post</string>
+    <string name="segment_control_reward">Reward</string>
+
+    <string name="segment_control_anywhere">Anywhere</string>
+    <string name="segment_control_nearme">Near Me</string>
+    <string name="segment_control_custom">Custom</string>
+    <string name="segment_control_unfiltered">Unfiltered</string>
+    <string name="segment_control_noanswer">No Answers</string>
+    <string name="segment_control_topanswer">Top Answered</string>
+    <string name="segment_control_newest">Newest</string>
+    <string name="segment_control_oldest">Oldest</string>
+
+    <string name="child_supporter_string">Reqularly supporting other people's questions. The higher the \nsuppoert, the higher up the filter it will go</string>
+    <string name="child_response_string">Respond to people's questions regulary to gain the \nhighest regard</string>
+    <string name="child_profile_string">Filled out all the profile information such as phone number, \nbirthday, sports, etc</string>
+
+    <string name="select_sports">Select Sports</string>
+
+    <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
+    <string name="pull_to_refresh_release_label">Release to refresh…</string>
+    <string name="pull_to_refresh_refreshing_label">Loading…</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+
+    <string name="description_zoom_touch_close">Expanded image (touch to close)</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ios_actionsheet_item_textsize">22sp</dimen>
+    <dimen name="ios_actionsheet_image_viewsize">250dp</dimen>
+    <dimen name="height_indicator_tab">7dp</dimen>
+    <dimen name="bg_height">240dp</dimen>
+
+    <dimen name="indicator_right_padding">20dp</dimen>
+    <dimen name="indicator_corner_radius">24dp</dimen>
+    <dimen name="indicator_internal_padding">10dp</dimen>
+    <dimen name="header_footer_left_right_padding">40dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">25dp</dimen>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@drawable/main_logo">
+        <!--Any child View here, TabLayout for example-->
+        <LinearLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.wonderkiln.blurkit.BlurLayout
+                android:id="@+id/blurLayout"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                blk_blurRadius="12"
+                blk_downscaleFactor="0.12"
+                blk_fps="60">
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/dialog_title_select_action"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="17dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+            </com.wonderkiln.blurkit.BlurLayout>
+            <TextView
+                android:id="@+id/txt_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Select the type of media"
+                android:textColor="@color/colorText"
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@android:color/transparent"/>
+            <Button
+                android:id="@+id/btn_select_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Select Image"
+                android:textColor="@color/colorGrey"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:background="@android:color/transparent" />
+            <Button
+                android:id="@+id/btn_select_video"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Select Video"
+                android:textColor="@color/colorGrey"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:background="@android:color/transparent" />
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:text="Cancel"
+                android:textColor="@color/colorGrey"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+</FrameLayout>

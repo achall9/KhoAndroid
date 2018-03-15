@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/rlProfile"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Rory J. Cassidy"
+            android:textColor="@color/colorBlack"
+            android:textSize="12dp"
+            android:id="@+id/tvUserName"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thanks Cr. Anthony, I have difficulty walking, I can't really extend my legs out as far as usual or straighten the legs so I am not walking as normal and walking a lot slower however I don't have pain down my legs or difficulty with bladder/bowel movements thankfully."
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp"
+            android:background="@drawable/rounded_chat_send"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/tvMsgText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="15 hours ago"
+            android:textSize="11dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvMsgTime"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="15dp">
+
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/civPhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/blankprofile"
+            app:shadow="true" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/therapist_red"
+            android:id="@+id/ivFavorite"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_mainLayout"
+    tools:context="com.kholabs.khoand.Fragment.ProfileSettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorDeepWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="bottom"
+            android:background="@drawable/pattern_green">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/llBack"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:src="@drawable/left"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Back"
+                        android:textSize="25dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textSize="30dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Preferences"
+            android:textSize="23dp"
+            android:layout_margin="30dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/logout_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingTop="15dp"
+            android:paddingLeft="25dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:id="@+id/imgLogOut"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/misc_logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@+id/imgLogOut"
+                android:text="Logout"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/misc_right" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorText"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_changepsw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingTop="15dp"
+            android:paddingLeft="25dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="25dp">
+
+            <ImageView
+                android:id="@+id/imgChange"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/misc_password" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@+id/imgChange"
+                android:text="Change Password"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/misc_right" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:textSize="23dp"
+            android:layout_margin="30dp"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_tutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingTop="15dp"
+            android:paddingLeft="25dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="View Help"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/misc_right" />
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorText"/>
+        </LinearLayout>
+</FrameLayout>

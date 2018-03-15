@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/adapter_feed">
+
+        <LinearLayout
+            android:id="@+id/bodyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <com.pkmmte.view.CircularImageView
+                    android:id="@+id/civPhoto"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/blankprofile"
+                    android:layout_marginRight="15dp"
+                    app:shadow="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_toLeftOf="@+id/llShare">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rory J. Cassidy"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14dp"
+                            android:id="@+id/tvFeedName"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yesterday"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/colorline"
+                            android:textSize="10dp"
+                            android:id="@+id/tvFeedTime"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/misc_accepted"
+                            android:id="@+id/ivShare"/>
+                        <TextView
+                            android:id="@+id/tvAccepted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/colorGrey"
+                            android:text="Answered"
+                            android:textSize="10dp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="5"
+                android:text="I blocked a slap shot right on my ankle in hockey a few weeks ago and the spot where it hit is still tender and hurts when i skate. How long will this last and how can i get rid of the pain?"
+                android:ellipsize="end"
+                android:id="@+id/tvFeedText"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorText"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:id="@+id/post_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/more"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/video_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorBlack"
+                android:visibility="gone"
+                >
+
+                <VideoView
+                    android:id="@+id/post_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <com.pkmmte.view.CircularImageView
+                    android:id="@+id/play_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:src="@drawable/player_play"
+                    />
+
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How long have you been dealing with this injury?"
+                android:textSize="11dp"
+                android:textColor="@color/colorline"
+                android:textStyle="italic"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 days"
+                android:textSize="11dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tvAnswer1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="When is it at its worst?"
+                android:textSize="11dp"
+                android:textColor="@color/colorline"
+                android:textStyle="italic"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="When trying to get up from a chair or bed"
+                android:textSize="11dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/tvAnswer2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorText"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/unlike"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/ivFeedFavorite"/>
+
+                <TextView
+                    android:id="@+id/tvSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Supports"
+                    android:textSize="11dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llResponse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/misc_comment_blue"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/ivFeedComment"/>
+
+                <TextView
+                    android:id="@+id/tvResponse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Responses"
+                    android:textSize="11dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/button_left"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

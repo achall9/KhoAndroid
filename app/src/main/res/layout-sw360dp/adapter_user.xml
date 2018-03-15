@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:weightSum="1"
+    android:background="@android:color/transparent"
+    >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_weight="0.2"
+        android:layout_gravity="center"
+        android:background="@color/colorWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <com.pkmmte.view.CircularImageView
+                android:id="@+id/civPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/blankprofile"
+                app:shadow="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_weight="0.8"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@color/colorWhite">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:gravity="bottom"
+            android:paddingBottom="5dp"
+            android:text="James Sommer"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:id="@+id/tvUserName"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:gravity="top"
+            android:paddingTop="5dp"
+            android:text="Athlete"
+            android:textSize="13dp"
+            android:id="@+id/tvUserType"/>
+    </LinearLayout>
+</LinearLayout>

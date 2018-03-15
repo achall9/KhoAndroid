@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "9204255472",
+    "firebase_url": "https://kho-labs-f163f.firebaseio.com",
+    "project_id": "kho-labs-f163f",
+    "storage_bucket": "kho-labs-f163f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9204255472:android:952b7bd0385c0857",
+        "android_client_info": {
+          "package_name": "com.kholabs.khoand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9204255472-4675gqc11h6sh7i9n4vdckrj3ola03ug.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kholabs.khoand",
+            "certificate_hash": "c54eb3a80215bde7146273d4edfe2ad84f0ddb8e"
+          }
+        },
+        {
+          "client_id": "9204255472-qq812juqahdgehi1g26veu1j534dolur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuwSosqxI6OSWPYqvWMSX2tqYWA5O_6iU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9204255472-qq812juqahdgehi1g26veu1j534dolur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -93,10 +93,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="5"
                 android:text="I blocked a slap shot right on my ankle in hockey a few weeks ago and the spot where it hit is still tender and hurts when i skate. How long will this last and how can i get rid of the pain?"
                 android:textSize="22dp"
-                android:ellipsize="end"
                 android:id="@+id/tvFeedText"/>
 
             <View

@@ -88,7 +88,6 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         rootLayout = (RelativeLayout) findViewById(R.id.rootLayout);
         mPager = (NonSwipeableViewPager) findViewById(R.id.pager);

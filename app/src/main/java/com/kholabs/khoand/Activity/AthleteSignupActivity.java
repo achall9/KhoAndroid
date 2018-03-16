@@ -214,7 +214,7 @@ public class AthleteSignupActivity extends ActivityBase implements ConstValues, 
 
         if (password.equals(confirm) == false)
         {
-            AlertDialog.Builder builder = new AlertDialog.Builder(AthleteSignupActivity.this, android.R.style.Theme_Holo_Light_Dialog);
+            AlertDialog.Builder builder = new AlertDialog.Builder(AthleteSignupActivity.this, AlertDialog.THEME_HOLO_LIGHT);
             TextView myMsg = new TextView(this);
             myMsg.setText("Passwords do not match.");
             myMsg.setGravity(Gravity.CENTER_HORIZONTAL);

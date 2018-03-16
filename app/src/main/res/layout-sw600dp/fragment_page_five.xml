@@ -44,7 +44,7 @@
             android:layout_weight="1.5"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Here you can communicate other Athletes\n and Therapists"
+            android:text="Here you can communicate with other athletes\n and therapists."
             android:textColor="@color/colorWhite"
             android:textSize="25dp"
             android:maxLines="4"/>

@@ -162,8 +162,9 @@ public class MyApp extends Application {
 
         return null;
     }
-        public void alertDisplayer(String title, String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getCurrentActivity(), android.R.style.Theme_Holo_Light_Dialog   );
+
+    public void alertDisplayer(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getCurrentActivity(), AlertDialog.THEME_HOLO_LIGHT );
         builder.setTitle(title);
         TextView myMsg = new TextView(this);
         myMsg.setText(message);
@@ -195,7 +196,7 @@ public class MyApp extends Application {
     }
 
     public void alertDisplayer(String title, String message, String btnString) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getCurrentActivity(), android.R.style.Theme_Holo_Light_Dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getCurrentActivity(), AlertDialog.THEME_HOLO_LIGHT);
         builder.setTitle(title);
         TextView myMsg = new TextView(this);
         myMsg.setText(message);

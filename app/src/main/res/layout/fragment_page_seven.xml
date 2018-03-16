@@ -44,7 +44,7 @@
             android:layout_weight="1.5"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Here you will find Message and Comment\nreplies. Also important threadItems from the Kho\n Team"
+            android:text="Here you will find important message and comment replies. Also important\n messages from the Kho Team."
             android:textColor="@color/colorWhite"
             android:textSize="16dp"
             android:maxLines="4"/>

@@ -14,7 +14,7 @@
         android:hint="What is your injury question?"
         android:textColorHint="@color/colorWhite"
         android:textColor="@color/colorWhite"
-        android:textSize="14dp"
+        android:textSize="17dp"
         android:singleLine="true"
         android:id="@+id/edtQuery">
     </EditText>

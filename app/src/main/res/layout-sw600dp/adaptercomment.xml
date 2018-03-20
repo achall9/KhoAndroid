@@ -81,8 +81,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Thanks Cr. Anthony, I have difficulty walking, I can't really extend my legs out as far as usual or straighten the legs so I am not walking as normal and walking a lot slower however I don't have pain down my legs or difficulty with bladder/bowel movements thankfully."
-                android:maxLines="5"
-                android:ellipsize="end"
                 android:textColor="@color/colorPrimary"
                 android:textSize="21dp"
                 android:padding="5dp"/>

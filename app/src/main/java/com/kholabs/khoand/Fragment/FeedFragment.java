@@ -125,6 +125,8 @@ public class FeedFragment extends FragmentBase implements View.OnClickListener, 
     private EditText etSearch;
     private ImageView ivBell, ivFilter;
 
+    private com.github.aakira.expandablelayout.ExpandableLayout queryPager;
+    
     private ExpandableLayout expandFilter;
     private LinearLayout filterArea;
     private LinearLayout queryFixed, queryList, queryLayout, collaseLayout, statusLayout;
